@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtherDemoController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yEchartsView" destination="UG4-lp-nP3" id="vlO-sS-0ih"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="ADBannerView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="90001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB8-y5-rpI">
+                    <rect key="frame" x="64" y="32" width="60" height="30"/>
+                    <state key="normal" title="过渡事件"/>
+                    <connections>
+                        <action selector="showOtherDemo:" destination="-1" eventType="touchUpInside" id="Jx0-fM-hGt"/>
+                    </connections>
+                </button>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UG4-lp-nP3" customClass="PYEchartsView">
+                    <rect key="frame" x="0.0" y="347" width="375" height="300"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="KXM-T8-arr"/>
+                    </constraints>
+                </webView>
+                <button opaque="NO" tag="90002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyc-2x-o5o">
+                    <rect key="frame" x="64" y="70" width="60" height="30"/>
+                    <state key="normal" title="暂无数据"/>
+                    <connections>
+                        <action selector="showOtherDemo:" destination="-1" eventType="touchUpInside" id="ZEp-4e-Q4g"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="90003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0C-B1-6Z8">
+                    <rect key="frame" x="72" y="108" width="45" height="30"/>
+                    <state key="normal" title="多图表"/>
+                    <connections>
+                        <action selector="showOtherDemo:" destination="-1" eventType="touchUpInside" id="nTe-aN-4NH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="90004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5H-ZE-g7M">
+                    <rect key="frame" x="64" y="146" width="60" height="30"/>
+                    <state key="normal" title="获得截图"/>
+                    <connections>
+                        <action selector="showOtherDemo:" destination="-1" eventType="touchUpInside" id="Jrs-0u-PMl"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="90005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeS-9U-ak7">
+                    <rect key="frame" x="67" y="184" width="54" height="30"/>
+                    <state key="normal" title="多图表2"/>
+                    <connections>
+                        <action selector="showOtherDemo:" destination="-1" eventType="touchUpInside" id="GIl-N4-qE8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="UG4-lp-nP3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5KS-6O-1Wx"/>
+                <constraint firstAttribute="bottom" secondItem="UG4-lp-nP3" secondAttribute="bottom" constant="20" id="7Q0-zd-do3"/>
+                <constraint firstItem="i5H-ZE-g7M" firstAttribute="top" secondItem="g0C-B1-6Z8" secondAttribute="bottom" constant="8" id="8NI-Qp-ow2"/>
+                <constraint firstItem="g0C-B1-6Z8" firstAttribute="top" secondItem="lyc-2x-o5o" secondAttribute="bottom" constant="8" id="8wS-Zt-IGK"/>
+                <constraint firstAttribute="trailing" secondItem="UG4-lp-nP3" secondAttribute="trailing" id="M8C-uA-gyj"/>
+                <constraint firstItem="g0C-B1-6Z8" firstAttribute="centerX" secondItem="lyc-2x-o5o" secondAttribute="centerX" id="MWZ-ai-qZi"/>
+                <constraint firstItem="tB8-y5-rpI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.5" id="XjO-F2-aOj"/>
+                <constraint firstItem="lyc-2x-o5o" firstAttribute="top" secondItem="tB8-y5-rpI" secondAttribute="bottom" constant="8" id="YNP-TC-fOa"/>
+                <constraint firstItem="lyc-2x-o5o" firstAttribute="centerX" secondItem="tB8-y5-rpI" secondAttribute="centerX" id="czY-1Y-1JX"/>
+                <constraint firstItem="CeS-9U-ak7" firstAttribute="centerX" secondItem="i5H-ZE-g7M" secondAttribute="centerX" id="d2Z-P3-Bn1"/>
+                <constraint firstItem="CeS-9U-ak7" firstAttribute="top" secondItem="i5H-ZE-g7M" secondAttribute="bottom" constant="8" id="q16-88-R2g"/>
+                <constraint firstItem="tB8-y5-rpI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="32" id="u13-68-3pN"/>
+                <constraint firstItem="i5H-ZE-g7M" firstAttribute="centerX" secondItem="g0C-B1-6Z8" secondAttribute="centerX" id="xbW-JF-oNH"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="385.5" y="481.5"/>
+        </view>
+    </objects>
+</document>
